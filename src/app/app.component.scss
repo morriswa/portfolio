@@ -1,13 +1,13 @@
 @import 'src/styles';
 
 #app-header {
-    background-color: $dark;
-    padding: 10px 20px;
-    top: 0;
     position: fixed;
+    top: 0;
     width: 100vw;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
+    background-color: $dark;
 
     &-buttons {
         float: right;
@@ -36,4 +36,6 @@
     }
 }
 
-
+#app-content {
+    margin-top: 60px;
+}
