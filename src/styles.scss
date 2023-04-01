@@ -2,3 +2,22 @@
 
 // Import Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+.tab-content {
+    padding: 10px 20px;
+}
+
+.inline-pics {
+    max-height: 15vh;
+    max-width: 30vw;
+}
+
+.inline-split-style {
+    display: flex;
+
+
+    .italic-low-key {
+        font-style: italic;
+        font-weight: 200;
+    }
+}
