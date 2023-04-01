@@ -6,11 +6,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EducationComponent } from './components/education/education.component';
+import { ExperienceComponent } from 'src/app/components/experience/experience.component';
+import { ProjectDemoComponent } from './components/projects/projects.component';
+import { WorkWithMeComponent } from './components/work-with-me/work-with-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EducationComponent
+    EducationComponent,
+    ExperienceComponent,
+    ProjectDemoComponent,
+    WorkWithMeComponent,
   ],
   imports: [
     BrowserModule,
