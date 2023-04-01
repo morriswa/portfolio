@@ -57,7 +57,7 @@
               ],
               "outputHashing": "all"
             },
-            "development": {
+            "local": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -74,11 +74,11 @@
             "production": {
               "browserTarget": "portfolio:build:production"
             },
-            "development": {
-              "browserTarget": "portfolio:build:development"
+            "local": {
+              "browserTarget": "portfolio:build:local"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "local"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
