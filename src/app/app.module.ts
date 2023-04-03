@@ -2,6 +2,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// Bootstrap
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+
 // APP
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +23,8 @@ import { WorkWithMeComponent } from './components/work-with-me/work-with-me.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbCollapseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
