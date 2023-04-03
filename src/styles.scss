@@ -28,7 +28,14 @@
 .inline-split-style {
     display: flex;
 
+    @media (max-width: 700px) {
+        flex-direction: column;
 
+        .little-bean {
+            opacity: 0;
+        }
+    }
+    
     .italic-low-key {
         font-style: italic;
         font-weight: 200;
