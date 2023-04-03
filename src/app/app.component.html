@@ -26,11 +26,17 @@
     }"
     [ngbCollapse]="is_collapsed">
 
-      <button type="button" class="btn btn-dark" routerLink="/education">Education</button>
-      <button type="button" class="btn btn-dark" routerLink="/experience">Experience</button>
-      <button type="button" class="btn btn-dark" routerLink="/projects">Projects</button>
-      <button type="button" class="btn btn-dark" routerLink="/work">Work With Me</button>
-
+      <!-- Please add nav buttons to BUTTONS in component TS -->
+      <button 
+        *ngFor="let navButton of navbarButtons"
+        type="button"
+        class="btn btn-dark"
+        [routerLink]="navButton.path"
+        (click)="closeMobileNav()"
+        >
+        {{ navButton.name }}
+      </button>
+     
   </div>
 </nav>
 
