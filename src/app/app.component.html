@@ -1,12 +1,38 @@
-<div id="app-header">
+<nav 
+  id="app-header" 
+  class="navbar navbar-expand-md navbar-dark"
+  >
+
   <a href="mailto:william@morriswa.org">william@morriswa.org</a>
-  <div id="app-header-buttons">
-    <button type="button" class="btn btn-dark" routerLink="/education">Education</button>
-    <button type="button" class="btn btn-dark" routerLink="/experience">Experience</button>
-    <button type="button" class="btn btn-dark" routerLink="/projects">Projects</button>
-    <button type="button" class="btn btn-dark" routerLink="/work">Work With Me</button>
+
+  <button 
+    class="navbar-toggler" 
+    type="button" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#app-header-buttons" 
+    aria-controls="app-header-buttons" 
+    aria-label="Toggle navigation menu"
+    (click)="is_collapsed = !is_collapsed"
+    >
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    id="app-header-buttons"
+    class="collapse navbar-collapse flex-row"
+    [ngStyle]="{
+      'justify-content': 'flex-end',
+      'padding-top': is_collapsed? '0px':'10px'
+    }"
+    [ngbCollapse]="is_collapsed">
+
+      <button type="button" class="btn btn-dark" routerLink="/education">Education</button>
+      <button type="button" class="btn btn-dark" routerLink="/experience">Experience</button>
+      <button type="button" class="btn btn-dark" routerLink="/projects">Projects</button>
+      <button type="button" class="btn btn-dark" routerLink="/work">Work With Me</button>
+
   </div>
-</div>
+</nav>
 
 <div id="app-content">
   <router-outlet></router-outlet>
