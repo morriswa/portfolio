@@ -1,0 +1,20 @@
+@import 'src/styles';
+
+.fsphoto {
+    height: max-content;
+    min-height: 100vh;
+    max-width: 100vw;
+    position: fixed;
+    object-fit:cover;
+    z-index: -10;
+}
+
+#caption {
+    text-align: left;
+    padding-top: 40vh;
+    color: rgb(228, 165, 209);
+    text-shadow: 5px 10px rgb(76,55,141);
+    font-family: cursive;
+    font-size: 8rem;
+    padding-left: 20px;
+}

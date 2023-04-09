@@ -1,9 +1,15 @@
 <nav 
   id="app-header" 
   class="navbar navbar-expand-md navbar-dark"
+  [ngStyle]="{
+    'background-color': isOnMainPage()? 'rgba(0,0,0,0)' : undefined
+  }"
+  [ngClass]="{
+    'app-header-wrapper':!isOnMainPage()
+  }"
   >
 
-  <a href="mailto:william@morriswa.org">william@morriswa.org</a>
+  <a routerLink="/">william@morriswa.org</a>
 
   <button 
     class="navbar-toggler" 
@@ -40,6 +46,10 @@
   </div>
 </nav>
 
-<div id="app-content">
+<div 
+  [ngStyle]="{
+    'margin-top': !isOnMainPage()? '60px' : undefined
+  }"
+  >
   <router-outlet></router-outlet>
 </div>

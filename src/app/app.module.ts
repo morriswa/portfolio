@@ -12,6 +12,7 @@ import { EducationComponent } from './components/education/education.component';
 import { ExperienceComponent } from 'src/app/components/experience/experience.component';
 import { ProjectDemoComponent } from './components/projects/projects.component';
 import { WorkWithMeComponent } from './components/work-with-me/work-with-me.component';
+import { FullscreenPhotoComponent } from './components/fullscreen-photo/fullscreen-photo.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { WorkWithMeComponent } from './components/work-with-me/work-with-me.comp
     ExperienceComponent,
     ProjectDemoComponent,
     WorkWithMeComponent,
+    FullscreenPhotoComponent,
   ],
   imports: [
     BrowserModule,

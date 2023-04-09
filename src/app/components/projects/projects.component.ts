@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IMAGE_LIBRARY } from 'src/app/images';
 
 @Component({
   selector: 'app-tab-projects',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectDemoComponent {
-
+  IMAGE_LIBRARY=IMAGE_LIBRARY;
 }
