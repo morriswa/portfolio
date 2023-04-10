@@ -1,5 +1,8 @@
 @import 'src/styles';
 
+
+$sml-caption-threshold: 400px;
+
 .fsphoto {
     height: max-content;
     min-height: 100vh;
@@ -7,6 +10,12 @@
     position: fixed;
     object-fit:cover;
     z-index: -10;
+
+    @media (max-width: $sml-caption-threshold) {
+        // object-fit: fill;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
 }
 
 #caption {
@@ -16,4 +25,21 @@
     text-shadow: 5px 10px rgb(76,55,141);
     font-size: 8rem;
     padding-left: 20px;
+
+    @media (max-width: $sml-caption-threshold) {
+        font-size: 4rem;
+        padding-top: 10vh;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 4rem;
+        padding-top: 10vh;
+    }
+    
+    @media (max-width: 1200px) {
+        // font-size: 4rem;
+        padding-top: 5vh;
+    } 
+
+
 }

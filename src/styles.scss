@@ -50,9 +50,14 @@ body {
     }
 }
 
-.inline-image {
-    max-height: 30px;
-    display: inline;
-    // float: left;
-    margin-right: 5px;
+.inline-text-and-logo {
+
+    display: flex; align-items: flex-start;
+
+    > img {
+        max-height: 25px;
+        display: inline;
+        // float: left;
+        margin-right: 5px;
+    }
 }

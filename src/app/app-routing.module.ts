@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'education', component: EducationComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'projects', component: ProjectDemoComponent },
-  { path: 'work', component: WorkWithMeComponent },
+  // { path: 'work', component: WorkWithMeComponent },
   { path: '', component: FullscreenPhotoComponent, pathMatch: 'full'}
 ];
 

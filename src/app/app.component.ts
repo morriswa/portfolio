@@ -5,7 +5,7 @@ const BUTTONS = [
   { path:'/education', name:'Education' },
   { path:'/experience', name:'Experience' },
   { path:'/projects', name:'Projects' },
-  { path:'/work', name:'Work With Me' },
+  // { path:'/work', name:'Work With Me' },
 ]
 
 @Component({
