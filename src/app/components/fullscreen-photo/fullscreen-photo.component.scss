@@ -6,6 +6,8 @@ $sml-caption-threshold: 400px;
 .fsphoto {
     height: max-content;
     min-height: 100vh;
+    min-width: 100vw;
+    max-height: 120vh;
     max-width: 100vw;
     position: fixed;
     object-fit:cover;
