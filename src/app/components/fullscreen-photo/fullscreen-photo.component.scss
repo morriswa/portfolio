@@ -10,12 +10,6 @@ $sml-caption-threshold: 400px;
     position: fixed;
     object-fit:cover;
     z-index: -10;
-
-    @media (max-width: $sml-caption-threshold) {
-        // object-fit: fill;
-        min-width: 100vw;
-        min-height: 100vh;
-    }
 }
 
 #caption {
