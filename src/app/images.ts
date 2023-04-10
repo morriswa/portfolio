@@ -13,5 +13,11 @@ export const IMAGE_LIBRARY = {
     },
     seniorPhoto: {
         url: 'assets/_CEP6700.jpg'
+    },
+    springLogo: {
+        url: 'https://www.svgrepo.com/show/354380/spring-icon.svg'
+    },
+    ngLogo: {
+        url: 'https://angular.io/assets/images/logos/angular/angular.png'
     }
 }
