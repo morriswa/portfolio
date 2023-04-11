@@ -1,0 +1,10 @@
+<div class="common-header">
+    <h1>{{ this.headerText }}</h1>
+    <hr>
+    <div class="common-header-logos">
+        <img
+            *ngFor="let logo of logos"
+            [src]="logo"
+            >
+    </div>
+</div>

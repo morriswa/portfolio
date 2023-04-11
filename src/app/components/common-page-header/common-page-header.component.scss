@@ -1,0 +1,20 @@
+@import 'src/styles';
+
+.common-header {
+    margin-bottom: 5vh;
+   
+    &-logos { 
+        @media (max-width: 600px) {
+            opacity: 0;
+            // flex-direction: column;
+        }
+
+        > img {
+            max-height: 50px;
+            display: inline;
+            margin-left: 15px; 
+            align-content: baseline;
+            // overflow: scroll;
+        }   
+    }
+}

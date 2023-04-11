@@ -19,5 +19,20 @@ export const IMAGE_LIBRARY = {
     },
     ngLogo: {
         url: 'https://angular.io/assets/images/logos/angular/angular.png'
+    },
+    htmlCssLogo: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/1200px-CSS3_and_HTML5_logos_and_wordmarks.svg.png'
+    },
+    pythonLogo: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png'
+    },
+    cppLogo: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png'
+    },
+    javaLogo: {
+        url: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/800px-Java_programming_language_logo.svg.png'
+    },
+    tsLogo: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png'
     }
 }

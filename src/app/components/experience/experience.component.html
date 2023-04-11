@@ -1,7 +1,12 @@
 <div class="tab-content">
-    <h1>Experience, Employment, Leadership</h1>
-    <hr>
+    <app-common-page-header 
+        headerText="Experience, Employment, Leadership"
+        [logos]="[IMAGE_LIBRARY.springLogo.url, IMAGE_LIBRARY.ngLogo.url, IMAGE_LIBRARY.javaLogo.url, IMAGE_LIBRARY.tsLogo.url]"
+        ></app-common-page-header>
+
+
         <img
+            style="margin-top: 5vh;"
             class="inline-pics"
             [src]="IMAGE_LIBRARY.cnaLogo.url"
             >

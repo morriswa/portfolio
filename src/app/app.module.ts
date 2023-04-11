@@ -13,6 +13,7 @@ import { ExperienceComponent } from 'src/app/components/experience/experience.co
 import { ProjectDemoComponent } from './components/projects/projects.component';
 import { WorkWithMeComponent } from './components/work-with-me/work-with-me.component';
 import { FullscreenPhotoComponent } from './components/fullscreen-photo/fullscreen-photo.component';
+import { CommonPageHeaderComponent } from './components/common-page-header/common-page-header.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FullscreenPhotoComponent } from './components/fullscreen-photo/fullscre
     ProjectDemoComponent,
     WorkWithMeComponent,
     FullscreenPhotoComponent,
+    CommonPageHeaderComponent,
   ],
   imports: [
     BrowserModule,
