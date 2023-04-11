@@ -4,16 +4,12 @@
         [logos]="[IMAGE_LIBRARY.springLogo.url, IMAGE_LIBRARY.ngLogo.url, IMAGE_LIBRARY.javaLogo.url, IMAGE_LIBRARY.tsLogo.url]"
         ></app-common-page-header>
 
-
-        <img
-            class="page-content-dual-header-topper"
-            [src]="IMAGE_LIBRARY.cnaLogo.url"
-            >
-
-        <div class="page-content-dual-header">
-            <h3>Junior Software Developer</h3>
-            <h3 class="page-content-dual-header-secondary">&nbsp; May 2022 >> Present</h3>
-        </div>
+        <app-dual-content-header
+            primaryHeader="Junior Software Developer"
+            secondaryHeader="May 2022 >> Present"
+            [includeBean]="false"
+            [topperImageUrl]="IMAGE_LIBRARY.cnaLogo.url"
+            ></app-dual-content-header>
 
         <ul>
             <h4 class="text-with-logo">

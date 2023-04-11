@@ -5,15 +5,12 @@
         ></app-common-page-header>
 
         <!-- College Experience -->
-        <img
-            class="page-content-dual-header-topper"
-            [src]="IMAGE_LIBRARY.sexyLegs.url"
-            >
-
-        <div class="page-content-dual-header">
-            <h3>University of Kansas&nbsp;</h3>
-            <h3 class="page-content-dual-header-secondary"><span class="little-bean">-&nbsp;</span>Undergraduate Engineering Student</h3>
-        </div>
+        <app-dual-content-header
+            primaryHeader="University of Kansas"
+            secondaryHeader="Undergraduate Engineering Student"
+            [includeBean]="true"
+            [topperImageUrl]="IMAGE_LIBRARY.sexyLegs.url"
+            ></app-dual-content-header>
 
         <ul>
             <li>Pursuing Computer Science B.S.</li>
@@ -25,15 +22,12 @@
         <br>
 
         <!-- Highschool Experience -->
-        <img
-            class="page-content-dual-header-topper"
-            [src]="IMAGE_LIBRARY.eComm.url"
-            >
-
-        <div class="page-content-dual-header">
-            <h3>Olathe e-Communications Academy&nbsp;</h3>
-            <h3 class="page-content-dual-header-secondary"><span class="little-bean">-&nbsp;</span>Highschool</h3>
-        </div>
+        <app-dual-content-header
+            primaryHeader="Olathe e-Communications Academy"
+            secondaryHeader="Highschool"
+            [includeBean]="true"
+            [topperImageUrl]="IMAGE_LIBRARY.eComm.url"
+            ></app-dual-content-header>
 
         <ul>
             <li>WordPress Web Development</li>

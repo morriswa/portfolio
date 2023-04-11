@@ -14,6 +14,8 @@ import { ProjectDemoComponent } from './components/projects/projects.component';
 import { WorkWithMeComponent } from './components/work-with-me/work-with-me.component';
 import { FullscreenPhotoComponent } from './components/fullscreen-photo/fullscreen-photo.component';
 import { CommonPageHeaderComponent } from './components/common-page-header/common-page-header.component';
+import { DualContentHeaderComponent } from './components/dual-content-header/dual-content-header.component';
+import { TypeDeleteEffectComponent } from './components/type-delete-effect/type-delete-effect.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { CommonPageHeaderComponent } from './components/common-page-header/commo
     WorkWithMeComponent,
     FullscreenPhotoComponent,
     CommonPageHeaderComponent,
+    DualContentHeaderComponent,
+    TypeDeleteEffectComponent,
   ],
   imports: [
     BrowserModule,

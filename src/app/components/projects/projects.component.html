@@ -5,28 +5,23 @@
         ></app-common-page-header>
 
         <!-- HackKU Experience -->
-        <img
-            class="page-content-dual-header-topper"
-            [src]="IMAGE_LIBRARY.hackku2023.url"
-            >
-
-        <div class="page-content-dual-header">
-            <h3>HackKU 2023&nbsp;</h3>
-            <h3 class="page-content-dual-header-secondary"><span class="little-bean">-&nbsp;</span>36 Hr Hackathon</h3>
-        </div>
-
+        <app-dual-content-header
+            primaryHeader="HackKU 2023"
+            secondaryHeader="36 Hr Hackathon"
+            [includeBean]="true"
+            [topperImageUrl]="IMAGE_LIBRARY.hackku2023.url"
+            ></app-dual-content-header>
         <ul>
             <li>Experience with Angular and Spring Frameworks</li>
             <li>Typescript Development</li>
             <li>Experience with HTML / SCSS</li>
         </ul>
 
-    
-        <div class="page-content-dual-header">
-            <h3>Personal Projects&nbsp;</h3>
-            <h3 class="page-content-dual-header-secondary"><span class="little-bean">-&nbsp;</span>Task Application, Photo Sharing Social Network</h3>
-        </div>
-
+        <app-dual-content-header
+            primaryHeader="Personal Projects"
+            secondaryHeader="Task Application, Photo Sharing Social Network"
+            [includeBean]="true"
+            ></app-dual-content-header> 
         <ul>
             <li>PostgreSQL with Spring Data JPA and Jakarta Hibernate</li>
             <li>Managing Container Deployments with Amazon Lightsail</li>

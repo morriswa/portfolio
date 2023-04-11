@@ -28,30 +28,6 @@ body {
     padding: 10px 20px;
 }
 
-.page-content-dual-header-topper {
-    max-height: 15vh;
-    max-width: 30vw;
-}
-
-.page-content-dual-header {
-    display: flex;
-
-    // This moves secondary header under primary on small devices 
-    @media (max-width: 700px) {
-        flex-direction: column;
-
-        // and removes the '-' separating them for a better mobile experience
-        .little-bean {
-            opacity: 0;
-        }
-    }
-    
-    &-secondary {
-        font-style: italic;
-        font-weight: 200;
-    }
-}
-
 .text-with-logo {
     display: flex; 
     align-items: flex-start;
@@ -61,5 +37,22 @@ body {
         display: inline;
         // float: left;
         margin-right: 5px;
+    }
+}
+
+#tag {
+    display: flex;
+    text-align: left;
+    align-items: flex-end;
+    margin-top: 10px;
+    color: $white;
+    text-shadow: 5px 10px rgb(76,55,141);
+    padding-left: 20px;
+
+    > h2, span {
+        font-size: 4rem;
+        @media (max-width: 600px) {
+            font-size: 2rem;            
+        }
     }
 }
