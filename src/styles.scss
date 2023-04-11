@@ -20,6 +20,10 @@ $font-family: 'Ubuntu';
 @import "bootstrap/scss/navbar";
 
 // Declare Global Styles
+
+$pinky-pie: rgba(228,165,209, 1.0);
+$purple-poo: rgb(76,55,141);
+
 body {
     font-family: $font-family;
 }
@@ -45,9 +49,10 @@ body {
     text-align: left;
     align-items: flex-end;
     margin-top: 10px;
-    color: $white;
-    text-shadow: 5px 10px rgb(76,55,141);
+    color: $gray-200;
+    text-shadow: 0px 0px 5px $purple-poo;
     padding-left: 20px;
+    font-bo
 
     > h2, span {
         font-size: 4rem;

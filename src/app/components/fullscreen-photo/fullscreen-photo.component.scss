@@ -16,26 +16,24 @@ $sml-caption-threshold: 400px;
 
 #caption {
     text-align: left;
-    padding-top: 40vh;
-    color: rgb(228, 165, 209);
-    text-shadow: 5px 10px rgb(76,55,141);
+    color: $pinky-pie; 
+    text-shadow: 5px 10px $purple-poo;
     font-size: 8rem;
     padding-left: 20px;
 
+
     @media (max-width: $sml-caption-threshold) {
         font-size: 4rem;
-        padding-top: 10vh;
+        // padding-top: 10vh;
     }
 
     @media (max-width: 600px) {
         font-size: 4rem;
-        padding-top: 10vh;
+        // padding-top: 10vh;
     }
     
     @media (max-width: 1200px) {
         // font-size: 4rem;
-        padding-top: 5vh;
+        // padding-top: 5vh;
     } 
-
-
 }

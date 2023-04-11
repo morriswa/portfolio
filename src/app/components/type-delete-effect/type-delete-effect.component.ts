@@ -16,9 +16,9 @@ export class TypeDeleteEffectComponent implements AfterViewInit {
     "You Can...",
     "Write Anything You want...",
   ];
-  @Input() typingSpeedMs = 300;
-  @Input() typingDelMs = 300;
-  @Input() typingBreakMs = 1000;
+  @Input() typingSpeedMs = 100;
+  @Input() typingDelMs = 100;
+  @Input() typingBreakMs = 1500;
 
   private i = 0;
 

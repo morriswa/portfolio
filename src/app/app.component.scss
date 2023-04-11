@@ -9,8 +9,45 @@
 
     &-invisible {
         background-color: rgba(0,0,0,0);
+        
+        .navbar-toggler, .navbar-toggler-icon {
+            border-width: 1.5px;
+            background-color: $purple-poo;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='"+$pinky-pie+"' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
     }
 }
+
+.link-styles {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+
+    &-white,:focus,:active {
+        color: $white;
+     
+        &:hover {
+            color: $warning;
+        }
+    }
+
+    &-dark,:focus,:active {
+        color: $warning;
+        text-decoration: none;
+     
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &-invisible {
+        opacity: 0;
+    }
+}
+
 
 #app-header {
     position: fixed;
@@ -26,16 +63,7 @@
         text-align: right;
     }
 
-    > a, a:focus, a:active {
-        color: $white;
-        margin-top: auto;
-        margin-bottom: auto;
-        text-decoration: none;
-    }
-
-    > a:hover {
-        color: $warning;
-    }
+   
 
     .btn {
         margin: 5px 0 0 5px;
