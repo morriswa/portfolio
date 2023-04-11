@@ -1,11 +1,13 @@
+@import 'src/app/components/fullscreen-photo/fullscreen-photo.component';
+
 .blink {
-    border-right-style: solid;
-    animation: 1s blink infinity;
-  }
+  border-right-style: solid;
+  animation: 1s blink infinity;
+}
   
-  @keyframes blink {
-    to {
-      opacity: 0;
-    }
+@keyframes blink {
+  to {
+    opacity: 0;
   }
+}
   

@@ -24,16 +24,23 @@ $sml-caption-threshold: 400px;
 
     @media (max-width: $sml-caption-threshold) {
         font-size: 4rem;
-        // padding-top: 10vh;
     }
 
     @media (max-width: 600px) {
         font-size: 4rem;
-        // padding-top: 10vh;
     }
-    
-    @media (max-width: 1200px) {
-        // font-size: 4rem;
-        // padding-top: 5vh;
-    } 
+}
+
+#tag {
+    display: flex;
+    text-align: left;
+    align-items: flex-end;
+    color: $gray-200;
+    text-shadow: 0px 0px 5px $purple-poo;
+    padding-left: 20px;
+
+    font-size: 4rem;
+    @media (max-width: 600px) {
+        font-size: 2rem;            
+    }
 }
