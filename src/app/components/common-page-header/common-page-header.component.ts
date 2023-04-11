@@ -7,7 +7,6 @@ import { IMAGE_LIBRARY } from 'src/app/images';
   styleUrls: ['./common-page-header.component.scss']
 })
 export class CommonPageHeaderComponent {
-  IMAGE_LIBRARY=IMAGE_LIBRARY;
   @Input() headerText!: string;
-  @Input() logos!: any[];
+  @Input() logos!: string[];
 }
