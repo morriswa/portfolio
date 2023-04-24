@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { IMAGE_LIBRARY } from 'src/app/images';
 
 @Component({
   selector: 'app-common-page-header',

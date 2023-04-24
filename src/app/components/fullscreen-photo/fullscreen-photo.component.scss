@@ -16,7 +16,7 @@ $sml-caption-threshold: 400px;
 
 #caption {
     text-align: left;
-    color: $pinky-pie; 
+    color: $pinky-pie;
     text-shadow: 5px 10px $purple-poo;
     font-size: 8rem;
     padding-left: 20px;
@@ -36,11 +36,11 @@ $sml-caption-threshold: 400px;
     text-align: left;
     align-items: flex-end;
     color: $gray-200;
-    text-shadow: 0px 0px 5px $purple-poo;
+    text-shadow: 0 0 5px $purple-poo;
     padding-left: 20px;
 
     font-size: 4rem;
     @media (max-width: 600px) {
-        font-size: 2rem;            
+        font-size: 2rem;
     }
 }

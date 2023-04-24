@@ -2,12 +2,13 @@
     *ngIf="topperImageUrl"
     class="page-content-dual-header-topper"
     [src]="topperImageUrl"
+    alt="Supplemental Header Image"
     >
 
 <div class="page-content-dual-header">
     <h3>{{ primaryHeader }}&nbsp;</h3>
     <h3 class="page-content-dual-header-secondary">
-        <span 
+        <span
             *ngIf="includeBean"
             class="little-bean"
             >

@@ -1,5 +1,5 @@
-<nav 
-  id="app-header" 
+<nav
+  id="app-header"
   class="navbar navbar-expand-md"
   [ngClass]="{
     'app-header-wrapper navbar-dark':!isOnMainPage(),
@@ -12,16 +12,16 @@
     'link-styles link-styles-white':!isOnMainPage()
   }" routerLink="/">william@morriswa.org</a>
 
-  <button 
-    class="navbar-toggler" 
-    type="button" 
-    data-bs-toggle="collapse" 
-    data-bs-target="#app-header-buttons" 
-    aria-controls="app-header-buttons" 
+  <button
+    class="navbar-toggle"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#app-header-buttons"
+    aria-controls="app-header-buttons"
     aria-label="Toggle navigation menu"
     (click)="is_collapsed = !is_collapsed"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggle-icon"></span>
   </button>
 
   <div
@@ -34,7 +34,7 @@
     [ngbCollapse]="is_collapsed">
 
       <!-- Please add nav buttons to BUTTONS in component TS -->
-      <button 
+      <button
         *ngFor="let navButton of navbarButtons"
         type="button"
         class="btn btn-dark"
@@ -43,13 +43,13 @@
         >
         {{ navButton.name }}
       </button>
-     
+
   </div>
 </nav>
 
-<div 
+<div
   [ngStyle]="{
-    'margin-top': isOnMainPage()? '0px' : '60px' 
+    'margin-top': isOnMainPage()? '0px' : '60px'
   }"
   >
   <router-outlet></router-outlet>
