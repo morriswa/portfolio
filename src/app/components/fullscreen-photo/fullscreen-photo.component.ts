@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IMAGE_LIBRARY } from 'src/app/images';
+import { IMAGE_LIBRARY } from 'src/app/constants/images';
 
 @Component({
   selector: 'app-fullscreen-photo',

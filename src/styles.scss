@@ -5,19 +5,7 @@ $font-family: 'Ubuntu';
 
 
 // Import Bootstrap as Needed
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/maps';
-@import 'bootstrap/scss/mixins';
-@import 'bootstrap/scss/utilities';
-
-@import 'bootstrap/scss/root';
-@import 'bootstrap/scss/reboot';
-@import 'bootstrap/scss/type';
-@import 'bootstrap/scss/buttons';
-@import 'bootstrap/scss/transitions';
-@import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar";
+@import 'bootstrap/scss/bootstrap';
 
 // Declare Global Styles
 
@@ -33,7 +21,7 @@ body {
 }
 
 .text-with-logo {
-    display: flex; 
+    display: flex;
     align-items: flex-start;
 
     > img {

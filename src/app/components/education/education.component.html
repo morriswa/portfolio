@@ -16,7 +16,17 @@
             <li>Pursuing Computer Science B.S.</li>
             <li>Chancellors Club Scholar</li>
             <li>National Merit Scholar</li>
-            <li>Experience in Python and C/C++ Lang</li>
+            <li>Experience with Python and C/C++</li>
+            <li>Experience with SQL</li>
+            <!-- Opens the Add Plant Component -->
+            <li>
+                <a
+                  class="btn-link"
+                  (click)="this.openModalWithRef(courseHistModal)"
+                  >
+                <span>Completed Courses</span>
+              </a>
+            </li>
         </ul>
 
         <br>
@@ -33,5 +43,40 @@
             <li>WordPress Web Development</li>
             <li>Experience with HTML / CSS</li>
         </ul>
-        
+
 </div>
+
+<!-- Create NGB Modal, save as 'course_hist_modal' -->
+<ng-template #courseHistModal let-course_hist_modal>
+
+  <div class="modal-header">
+
+    <h4
+      class="modal-title"
+      id="modal-basic-title"
+      >
+      Completed Courses
+    </h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="course_hist_modal.dismiss()"
+    ></button>
+
+  </div>
+
+  <div class="modal-body">
+    <div *ngFor="let term of COURSES">
+      <h4>{{term.name}}</h4>
+      <ul>
+        <li
+          *ngFor="let course of term.classes"
+          >
+          {{ course.class }} - {{ course.description }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</ng-template>
