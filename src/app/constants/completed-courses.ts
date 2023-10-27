@@ -5,8 +5,10 @@ export const COMPLETED_COURSES = [
       { class: 'EECS 101', description: 'New Student Seminar', term: '2021 Fall' },
       { class: 'EECS 168', description: 'Programming I', term: '2022 Spring' },
       { class: 'EECS 268', description: 'Programming II', term: '2022 Fall' },
+      { class: 'EECS 330', description: 'Datastructures and Algorithms', term: '2023 Fall' },
+      { class: 'EECS 348', description: 'Software Engineering I', term: '2023 Fall' },
       { class: 'EECS 388', description: 'Embedded Systems', term: '2023 Spring' },
-
+      { class: 'EECS 468', description: 'Programming Paradigms', term: '2023 Fall' },
     ]
   },
   {
