@@ -1,18 +1,53 @@
-<div id="tab-content">
+<div class="tab-content">
 
     <app-common-page-header
-        headerText="Projects"
+        headerText="Current Projects"
         ></app-common-page-header>
 
         <app-dual-content-header
-            primaryHeader="Personal Projects"
-            secondaryHeader="Task Application, Photo Sharing Social Network"
+            primaryHeader="Messageboard Application API"
+            secondaryHeader="FOSS implementation of an Online Messageboard API"
             [includeBean]="true"
             ></app-dual-content-header>
+        <a
+          href="https://github.com/morriswa/message-board-service"
+          target="_blank"
+          >message-board-service Repo</a>
+        <p>This project helped me to enrich the following skills...</p>
         <ul>
-            <li>Designing Databases with Spring Data JPA and Jakarta Hibernate</li>
+            <li>Designing and Constructing a RESTful API with Java and Springboot</li>
+            <li>Providing useful Program Documentation and Intellisense integration with JavaDoc</li>
+            <li>Designing a Relational Database with Spring Data JPA and Jakarta Hibernate</li>
+            <li>Creating and Implementing Test Cases within Spring Framework with JUnit and Mockito testing libraries</li>
             <li>Maintaining a Postgres Database on Amazon Lightsail</li>
             <li>Managing Container Deployments with Amazon Lightsail</li>
             <li>Utilizing Github Actions for Build Pipelines</li>
+        </ul>
+
+<!--        <app-dual-content-header-->
+<!--          primaryHeader="Messageboard Web Application"-->
+<!--          secondaryHeader="FOSS implementation of an Online Messageboard Application"-->
+<!--          [includeBean]="true"-->
+<!--        ></app-dual-content-header>-->
+<!--        <a href="https://github.com/morriswa/message-board-service">Github</a>-->
+<!--        <ul>-->
+<!--          <li>Creating Single Page Web Applications with Angular Framework</li>-->
+<!--          <li>Design and Construct useful, simple UIs with Angular Material and Bootstrap</li>-->
+<!--          <li>Create intuitive asynchronous RESTful API clients</li>-->
+<!--          <li>Deploy and Maintain an NGINX container with Amazon Lightsail</li>-->
+<!--        </ul>-->
+
+        <app-dual-content-header
+          primaryHeader="This Portfolio!"
+          secondaryHeader="SPA Developer Portfolio with Angular"
+          [includeBean]="true"
+        ></app-dual-content-header>
+        <a href="https://github.com/morriswa/portfolio">portfolio Repo</a>
+        <p>This project helped me to enrich the following skills...</p>
+
+        <ul>
+          <li>Creating simple webpages with Angular Framework</li>
+          <li>Integrating a Lightsail Deployment with a Custom Domain Address</li>
+          <li>Utilizing HTTPS technologies for a secure UX</li>
         </ul>
 </div>
