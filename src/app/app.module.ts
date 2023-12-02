@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 // Bootstrap
-import {NgbCollapseModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbCollapseModule, NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 
 // APP
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +33,7 @@ import { TypeDeleteEffectComponent } from './components/shared/type-delete-effec
     BrowserModule,
     AppRoutingModule,
     NgbCollapseModule,
-    NgbModule
+    NgbModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
