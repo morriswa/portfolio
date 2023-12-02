@@ -9,8 +9,8 @@ $font-family: 'Ubuntu';
 
 // Declare Global Styles
 
-$pinky-pie: rgba(228,165,209, 1.0);
-$purple-poo: rgb(76,55,141);
+// $pinky-pie: rgba(228,165,209, 1.0);
+// $purple-poo: rgb(76,55,141);
 
 body {
     font-family: $font-family;
@@ -32,3 +32,7 @@ body {
     }
 }
 
+:root {
+    --pinky-pie: rgba(228,165,209, 1.0);
+    --purple-poo: rgb(76,55,141);
+}

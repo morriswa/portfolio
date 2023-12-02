@@ -1,5 +1,3 @@
-@import 'src/styles';
-
 
 $sml-caption-threshold: 400px;
 
@@ -16,8 +14,8 @@ $sml-caption-threshold: 400px;
 
 #caption {
     text-align: left;
-    color: $pinky-pie;
-    text-shadow: 5px 10px $purple-poo;
+    color: var(--pinky-pie);
+    text-shadow: 5px 10px var(--purple-poo);
     font-size: 8rem;
     padding-left: 20px;
 
@@ -35,8 +33,8 @@ $sml-caption-threshold: 400px;
     display: flex;
     text-align: left;
     align-items: flex-end;
-    color: $gray-200;
-    text-shadow: 0 0 5px $purple-poo;
+    color: var(--bs-gray-200);
+    text-shadow: 0 0 5px var(--purple-poo);
     padding-left: 20px;
 
     font-size: 4rem;
