@@ -10,7 +10,7 @@
   <a [ngClass]="{
     'link-styles link-styles-invisible':isOnMainPage(),
     'link-styles link-styles-white':!isOnMainPage()
-  }" routerLink="/">william@morriswa.org</a>
+  }" routerLink="/">william&#64;morriswa.org</a>
 
   <button
     class="navbar-toggler"
@@ -30,8 +30,7 @@
     [ngStyle]="{
       'justify-content': 'flex-end',
       'padding-top': is_collapsed? '0px':'10px'
-    }"
-    [ngbCollapse]="is_collapsed">
+    }">
 
       <!-- Please add nav buttons to BUTTONS in component TS -->
       <button

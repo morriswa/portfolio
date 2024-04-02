@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Router, RouterLink, RouterOutlet} from '@angular/router';
+import {NgClass, NgForOf, NgStyle} from "@angular/common";
 
 const BUTTONS = [
   { path:'/education', name:'Education' },
@@ -11,7 +12,15 @@ const BUTTONS = [
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    NgStyle,
+    NgClass,
+    NgForOf,
+  ],
+  standalone: true
 })
 export class AppComponent {
 

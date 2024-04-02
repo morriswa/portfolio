@@ -1,18 +1,38 @@
 import {Component, TemplateRef} from '@angular/core';
-import { IMAGE_LIBRARY } from 'src/app/constants/images';
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {COMPLETED_COURSES} from "../../constants/completed-courses";
+import { IMAGE_LIBRARY } from 'src/app/images';
+import {COMPLETED_COURSES} from "../../completed-courses";
+import {DualContentHeaderComponent} from "../shared/dual-content-header/dual-content-header.component";
+import {CommonPageHeaderComponent} from "../shared/common-page-header/common-page-header.component";
+import {NgFor} from "@angular/common";
+import {BsModalRef, BsModalService, ModalModule} from "ngx-bootstrap/modal";
 
 
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss']
+  styleUrls: ['./education.component.scss'],
+  imports: [
+    DualContentHeaderComponent,
+    CommonPageHeaderComponent,
+
+    NgFor,
+
+    ModalModule
+  ],
+  providers: [BsModalService],
+  standalone: true
 })
 export class EducationComponent {
+
   IMAGE_LIBRARY = IMAGE_LIBRARY;
   COURSES=COMPLETED_COURSES;
-  constructor(private modalService: NgbModal) {}
+
+
+
+
+  completedCoursesModal?: BsModalRef;
+
+  constructor(private modalService: BsModalService) {}
 
 
   /**
@@ -21,6 +41,6 @@ export class EducationComponent {
    * @param content a Template Reference to the Modal to be opened
    */
   openModalWithRef(content:TemplateRef<any>): void {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
+    this.completedCoursesModal = this.modalService.show(content);
   }
 }

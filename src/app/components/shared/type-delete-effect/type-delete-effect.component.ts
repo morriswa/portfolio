@@ -6,7 +6,9 @@ import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular
 @Component({
   selector: 'app-type-delete-effect',
   templateUrl: './type-delete-effect.component.html',
-  styleUrls: ['./type-delete-effect.component.scss']
+  styleUrls: ['./type-delete-effect.component.scss'],
+  imports: [],
+  standalone: true
 })
 export class TypeDeleteEffectComponent implements AfterViewInit {
   @ViewChild("textElement") textElement!: ElementRef;
