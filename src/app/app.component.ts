@@ -1,6 +1,6 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
-import {AsyncPipe, NgClass, NgForOf, NgStyle} from "@angular/common";
+import {AsyncPipe, NgClass, NgForOf, NgIf, NgStyle} from "@angular/common";
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import {BehaviorSubject} from "rxjs";
 
@@ -24,20 +24,25 @@ const BUTTONS = [
     AsyncPipe,
 
     BsDropdownModule,
+    NgIf,
   ],
   standalone: true
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
   title = 'portfolio';
-  menuIsOpen$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
+  mobileStyles$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   navbarButtons = BUTTONS;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  @HostListener('window:resize', ['$event'])
+  ngOnInit(): void {
+    this.mobileStyles$.next(window.innerWidth <= 800);
+  }
+
+  @HostListener('window:resize')
   onResize() {
-    this.menuIsOpen$.next(window.innerWidth > 800);
+    this.mobileStyles$.next(window.innerWidth <= 800);
   }
 
   isOnMainPage(): boolean {

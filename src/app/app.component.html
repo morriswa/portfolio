@@ -7,26 +7,38 @@
   }"
   >
 
-  <a [ngClass]="{
+  <a
+    [ngClass]="{
     'link-styles link-styles-invisible':isOnMainPage(),
     'link-styles link-styles-white':!isOnMainPage()
   }" routerLink="/">william&#64;morriswa.org</a>
 
-  <div dropdown [isOpen]="!!(menuIsOpen$ | async)">
+  @if (mobileStyles$|async) {
+    <div style="max-height: 35px" dropdown>
 
-    <button
-      dropdownToggle
-      class="navbar-toggler"
-      type="button"
-      aria-label="Toggle navigation menu"
-      >
-        <span class="navbar-toggler-icon"></span>
-    </button>
+      <div dropdownToggle class="dropdown-toggle" aria-label="Toggle navigation menu">
+        <div class="dropdown-toggle-icon"></div>
+      </div>
 
-    <br>
-    <div id="app-header-buttons" class="collapse dropdown-menu dropdown-menu-right" *dropdownMenu>
+      <br>
+      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
 
-      <!-- Please add nav buttons to BUTTONS in component TS -->
+        <!-- Please add nav buttons to BUTTONS in component TS -->
+        <button
+          *ngFor="let navButton of navbarButtons"
+          type="button"
+          class="btn btn-dark"
+          [routerLink]="navButton.path"
+        >
+          {{ navButton.name }}
+        </button>
+
+      </div>
+
+    </div>
+  } @else {
+    <!-- Please add nav buttons to BUTTONS in component TS -->
+    <div class="app-header-buttons">
       <button
         *ngFor="let navButton of navbarButtons"
         type="button"
@@ -37,8 +49,8 @@
       </button>
 
     </div>
+  }
 
-  </div>
 </nav>
 
 <div
