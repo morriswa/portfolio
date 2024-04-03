@@ -12,11 +12,19 @@
     'link-styles link-styles-white':!isOnMainPage()
   }" routerLink="/">william&#64;morriswa.org</a>
 
-  <div dropdown class="btn-group" [isOpen]="!!(menuIsOpen$ | async)">
-    <div
-      id="app-header-buttons"
-      class="collapse navbar-collapse flex-row"
-      *dropdownMenu>
+  <div dropdown [isOpen]="!!(menuIsOpen$ | async)">
+
+    <button
+      dropdownToggle
+      class="navbar-toggler"
+      type="button"
+      aria-label="Toggle navigation menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <br>
+    <div id="app-header-buttons" class="collapse dropdown-menu dropdown-menu-right" *dropdownMenu>
 
       <!-- Please add nav buttons to BUTTONS in component TS -->
       <button
@@ -29,15 +37,6 @@
       </button>
 
     </div>
-    <button
-      dropdownToggle
-      class="navbar-toggler"
-      type="button"
-      aria-label="Toggle navigation menu"
-      >
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
 
   </div>
 </nav>
