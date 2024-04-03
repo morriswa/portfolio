@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
-import {NgClass, NgForOf, NgStyle} from "@angular/common";
+import {AsyncPipe, NgClass, NgForOf, NgStyle} from "@angular/common";
+import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import {BehaviorSubject} from "rxjs";
 
 const BUTTONS = [
   { path:'/education', name:'Education' },
@@ -19,19 +21,23 @@ const BUTTONS = [
     NgStyle,
     NgClass,
     NgForOf,
+    AsyncPipe,
+
+    BsDropdownModule,
   ],
   standalone: true
 })
 export class AppComponent {
 
   title = 'portfolio';
-  is_collapsed = true;
+  menuIsOpen$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
   navbarButtons = BUTTONS;
 
   constructor(private router: Router) {}
 
-  closeMobileNav() {
-    this.is_collapsed = true;
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.menuIsOpen$.next(window.innerWidth > 800);
   }
 
   isOnMainPage(): boolean {

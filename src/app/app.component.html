@@ -12,25 +12,11 @@
     'link-styles link-styles-white':!isOnMainPage()
   }" routerLink="/">william&#64;morriswa.org</a>
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#app-header-buttons"
-    aria-controls="app-header-buttons"
-    aria-label="Toggle navigation menu"
-    (click)="is_collapsed = !is_collapsed"
-    >
-      <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div
-    id="app-header-buttons"
-    class="collapse navbar-collapse flex-row"
-    [ngStyle]="{
-      'justify-content': 'flex-end',
-      'padding-top': is_collapsed? '0px':'10px'
-    }">
+  <div dropdown class="btn-group" [isOpen]="!!(menuIsOpen$ | async)">
+    <div
+      id="app-header-buttons"
+      class="collapse navbar-collapse flex-row"
+      *dropdownMenu>
 
       <!-- Please add nav buttons to BUTTONS in component TS -->
       <button
@@ -38,10 +24,20 @@
         type="button"
         class="btn btn-dark"
         [routerLink]="navButton.path"
-        (click)="closeMobileNav()"
-        >
+      >
         {{ navButton.name }}
       </button>
+
+    </div>
+    <button
+      dropdownToggle
+      class="navbar-toggler"
+      type="button"
+      aria-label="Toggle navigation menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
 
   </div>
 </nav>

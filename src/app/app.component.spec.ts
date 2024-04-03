@@ -2,12 +2,14 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from 'src/app/app.component';
 import {provideRouter} from "@angular/router";
 import {routes} from "./routes";
+import {provideAnimations} from "@angular/platform-browser/animations";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [
-        provideRouter(routes)
+        provideRouter(routes),
+        provideAnimations()
       ]
     }).compileComponents();
   });
