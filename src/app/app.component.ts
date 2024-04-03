@@ -30,7 +30,6 @@ const BUTTONS = [
 })
 export class AppComponent implements OnInit{
 
-  title = 'portfolio';
   mobileStyles$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   navbarButtons = BUTTONS;
 
