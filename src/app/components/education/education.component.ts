@@ -41,6 +41,20 @@ export class EducationComponent {
    * @param content a Template Reference to the Modal to be opened
    */
   openModalWithRef(content:TemplateRef<any>): void {
-    this.completedCoursesModal = this.modalService.show(content);
+    this.completedCoursesModal = this.modalService.show(content, {
+      animated: true
+    });
+  }
+
+
+  /**
+   * Opens a Modal from its Template Ref
+   *
+   * @param content a Template Reference to the Modal to be opened
+   */
+  closeModal(): void {
+    const modalElement: HTMLElement | null = document.querySelector('.modal.show');
+    modalElement?.classList.remove('show');
+    this.completedCoursesModal?.hide()
   }
 }
