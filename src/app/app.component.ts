@@ -1,7 +1,7 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, computed, HostListener, inject, Signal, signal, WritableSignal} from '@angular/core';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
 import {AsyncPipe, NgClass, NgForOf, NgIf, NgStyle} from "@angular/common";
-import {BehaviorSubject} from "rxjs";
+import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 
 const BUTTONS = [
   { path:'/education', name:'Education' },
@@ -23,23 +23,22 @@ const BUTTONS = [
     AsyncPipe,
 
     NgIf,
+    MatMenuTrigger,
+    MatMenuItem,
+    MatMenu,
   ],
   standalone: true
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
 
-  mobileStyles$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  screenWidth: WritableSignal<number> = signal(window.innerWidth);
+  mobileStyles: Signal<boolean> = computed(()=>this.screenWidth() <= 800)
   navbarButtons = BUTTONS;
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-    this.mobileStyles$.next(window.innerWidth <= 800);
-  }
+  private router = inject(Router)
 
   @HostListener('window:resize')
   onResize() {
-    this.mobileStyles$.next(window.innerWidth <= 800);
+    this.screenWidth.set(window.innerWidth);
   }
 
   isOnMainPage(): boolean {

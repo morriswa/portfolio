@@ -13,31 +13,23 @@
     'link-styles link-styles-white':!isOnMainPage()
   }" routerLink="/">william&#64;morriswa.org</a>
 
-  @if (mobileStyles$|async) {
-    <div style="max-height: 35px" dropdown>
-
-      <div dropdownToggle class="dropdown-toggle" aria-label="Toggle navigation menu">
+  <!-- Please add nav buttons to BUTTONS in component TS -->
+  @if (mobileStyles()) {
+      <div [matMenuTriggerFor]="menu" class="dropdown-toggle" aria-label="Toggle navigation menu">
         <div class="dropdown-toggle-icon"></div>
       </div>
 
-      <br>
-      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
-
-        <!-- Please add nav buttons to BUTTONS in component TS -->
+      <mat-menu #menu="matMenu">
         <button
+          mat-menu-item
           *ngFor="let navButton of navbarButtons"
           type="button"
-          class="btn btn-dark"
           [routerLink]="navButton.path"
         >
           {{ navButton.name }}
         </button>
-
-      </div>
-
-    </div>
+      </mat-menu>
   } @else {
-    <!-- Please add nav buttons to BUTTONS in component TS -->
     <div class="app-header-buttons">
       <button
         *ngFor="let navButton of navbarButtons"
@@ -47,16 +39,14 @@
       >
         {{ navButton.name }}
       </button>
-
     </div>
   }
-
 </nav>
 
 <div
   [ngStyle]="{
     'margin-top': isOnMainPage()? '0px' : '60px'
   }"
-  >
+>
   <router-outlet></router-outlet>
 </div>

@@ -40,6 +40,16 @@ body {
     font-family: $font-family;
 }
 
+.mat-mdc-menu-content {
+  background-color: white !important;
+  border-radius: 8px;
+  margin-top: 8px !important;
+}
+
+.mat-mdc-menu-item {
+  padding: 8px !important;
+}
+
 .tab-content {
     padding: 10px 20px;
 }
@@ -58,6 +68,8 @@ body {
 
 .my-modal {
     padding: 30px;
+    overflow-y: scroll;
+    max-height: 80vh;
 }
 
 :root {
