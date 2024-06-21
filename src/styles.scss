@@ -1,5 +1,25 @@
+@use '@angular/material' as mat;
+
 // OVERRIDE STATIC BOOTSTRAP VARIABLES
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+
+@include mat.core();
+
+$theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$violet-palette,
+  ),
+  typography: (
+    brand-family: 'Ubuntu',
+    bold-weight: 900
+  ),
+  density: (
+    scale: -1
+  )
+));
+
 
 $font-family: 'Ubuntu';
 
@@ -11,6 +31,10 @@ $font-family: 'Ubuntu';
 
 // $pinky-pie: rgba(228,165,209, 1.0);
 // $purple-poo: rgb(76,55,141);
+
+html {
+  @include mat.core-theme($theme);
+}
 
 body {
     font-family: $font-family;
@@ -32,7 +56,12 @@ body {
     }
 }
 
+.my-modal {
+    padding: 30px;
+}
+
 :root {
     --pinky-pie: rgba(228,165,209, 1.0);
     --purple-poo: rgb(76,55,141);
 }
+

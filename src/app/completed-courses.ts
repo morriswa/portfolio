@@ -1,6 +1,6 @@
 export const COMPLETED_COURSES = [
   {
-    name: 'Computer Science Courses',
+    name: 'Computer Science',
     classes: [
       { class: 'EECS 168', description: 'Programming I', term: '2022 Spring' },
       { class: 'EECS 268', description: 'Programming II', term: '2022 Fall' },
@@ -12,7 +12,7 @@ export const COMPLETED_COURSES = [
     ]
   },
   {
-    name: 'Math and Science Courses',
+    name: 'Math and Science',
     classes: [
       { class: 'MATH 125', description: 'Calc I', term: '2021 Fall' },
       { class: 'MATH 126', description: 'Calc II', term: '2022 Spring' },
@@ -25,7 +25,7 @@ export const COMPLETED_COURSES = [
     ]
   },
   {
-    name: 'Other Courses',
+    name: 'Other',
     classes: [
       { class: 'COMS 130', description: 'Speaker-Audience Communication', term: '2021 Fall' },
       { class: 'ECON 142', description: 'Principles of Microeconomics', term: '2021 Fall' },

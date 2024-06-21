@@ -1,87 +1,38 @@
 <div class="tab-content">
-    <app-common-page-header
-        headerText="Education"
-        [logos]="[
-          IMAGE_LIBRARY.cppLogo.url,
-          IMAGE_LIBRARY.pythonLogo.url,
-          IMAGE_LIBRARY.htmlCssLogo.url,
-          IMAGE_LIBRARY.jsLogo.url]"
-        ></app-common-page-header>
+<app-common-page-header
+    headerText="Education"
+    [logos]="[
+      IMAGE_LIBRARY.cppLogo.url,
+      IMAGE_LIBRARY.pythonLogo.url,
+      IMAGE_LIBRARY.htmlCssLogo.url,
+      IMAGE_LIBRARY.jsLogo.url]"
+    ></app-common-page-header>
 
-        <!-- College Experience -->
-        <app-dual-content-header
-            primaryHeader="University of Kansas"
-            secondaryHeader="Undergraduate Engineering Student"
-            [includeBean]="true"
-            [topperImageUrl]="IMAGE_LIBRARY.sexyLegs.url"
-            ></app-dual-content-header>
+    <!-- College Experience -->
+    <app-dual-content-header
+        primaryHeader="University of Kansas"
+        secondaryHeader="School of Engineering"
+        [includeBean]="true"
+        [topperImageUrl]="IMAGE_LIBRARY.sexyLegs.url"
+        ></app-dual-content-header>
 
-        <ul>
-            <li>Pursuing Computer Science B.S.</li>
-            <li>Chancellors Club Scholar</li>
-            <li>National Merit Scholar</li>
-            <li>Proficient in Python, JavaScript, and C/C++ Programming</li>
-            <li>Experience with SQL</li>
-            <li>Experience with Node.JS</li>
+    <ul>
+        <li>Pursuing Computer Science B.S.</li>
+        <li>National Merit Scholar</li>
+        <li>Chancellors Club Scholar</li>
+        <li>Rising Student Scholar</li>
+        <li>Proficient in Python, JavaScript, and C/C++ Programming</li>
+        <li>Experience with SQL</li>
+        <li>Experience with Node.JS</li>
 
-            <li>
-                <a
-                  class="btn-link"
-                  (click)="this.openModalWithRef(courseHistModal)"
-                  >
-                <span>Completed Courses</span>
-              </a>
-            </li>
-        </ul>
-
-        <br>
-
-        <!-- Highschool Experience -->
-        <app-dual-content-header
-            primaryHeader="Olathe e-Communications Academy"
-            secondaryHeader="Highschool"
-            [includeBean]="true"
-            [topperImageUrl]="IMAGE_LIBRARY.eComm.url"
-            ></app-dual-content-header>
-
-        <ul>
-            <li>WordPress Web Development</li>
-            <li>Experience with HTML / CSS</li>
-        </ul>
+        <li>
+            <a
+              class="btn-link"
+              (click)="openCompletedCoursePopup()"
+              >
+            <span>Completed Courses</span>
+          </a>
+        </li>
+    </ul>
 
 </div>
-
-<!-- Create NGB Modal, save as 'course_hist_modal' -->
-<ng-template #courseHistModal>
-
-  <div class="modal-header">
-
-    <h4
-      class="modal-title"
-      id="modal-basic-title"
-      >
-      Completed Courses
-    </h4>
-    <button
-      type="button"
-      class="btn-close"
-      aria-label="Close"
-      (click)="closeModal()"
-    ></button>
-
-  </div>
-
-  <div class="modal-body">
-    <div *ngFor="let term of COURSES">
-      <h4>{{term.name}}</h4>
-      <ul>
-        <li
-          *ngFor="let course of term.classes"
-          >
-          {{ course.class }} - {{ course.description }}
-        </li>
-      </ul>
-    </div>
-  </div>
-
-</ng-template>

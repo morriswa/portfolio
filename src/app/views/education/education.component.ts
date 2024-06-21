@@ -1,10 +1,10 @@
-import {Component, TemplateRef} from '@angular/core';
+import {Component} from '@angular/core';
 import { IMAGE_LIBRARY } from 'src/app/images';
-import {COMPLETED_COURSES} from "../../completed-courses";
 import {DualContentHeaderComponent} from "../../components/dual-content-header/dual-content-header.component";
 import {CommonPageHeaderComponent} from "../../components/common-page-header/common-page-header.component";
 import {NgFor} from "@angular/common";
-import {BsModalRef, BsModalService, ModalModule} from "ngx-bootstrap/modal";
+import {MatDialog} from "@angular/material/dialog";
+import {CompletedCoursePopupComponent} from "./completed-course-popup/completed-course-popup.component";
 
 
 @Component({
@@ -17,44 +17,17 @@ import {BsModalRef, BsModalService, ModalModule} from "ngx-bootstrap/modal";
 
     NgFor,
 
-    ModalModule
   ],
-  providers: [BsModalService],
+  providers: [],
   standalone: true
 })
 export class EducationComponent {
 
   IMAGE_LIBRARY = IMAGE_LIBRARY;
-  COURSES=COMPLETED_COURSES;
 
+  constructor(private modalService: MatDialog) {}
 
-
-
-  completedCoursesModal?: BsModalRef;
-
-  constructor(private modalService: BsModalService) {}
-
-
-  /**
-   * Opens a Modal from its Template Ref
-   *
-   * @param content a Template Reference to the Modal to be opened
-   */
-  openModalWithRef(content:TemplateRef<any>): void {
-    this.completedCoursesModal = this.modalService.show(content, {
-      animated: true
-    });
-  }
-
-
-  /**
-   * Opens a Modal from its Template Ref
-   *
-   * @param content a Template Reference to the Modal to be opened
-   */
-  closeModal(): void {
-    const modalElement: HTMLElement | null = document.querySelector('.modal.show');
-    modalElement?.classList.remove('show');
-    this.completedCoursesModal?.hide()
+  openCompletedCoursePopup() {
+    this.modalService.open(CompletedCoursePopupComponent)
   }
 }

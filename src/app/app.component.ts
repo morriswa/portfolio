@@ -1,7 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
 import {AsyncPipe, NgClass, NgForOf, NgIf, NgStyle} from "@angular/common";
-import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import {BehaviorSubject} from "rxjs";
 
 const BUTTONS = [
@@ -23,7 +22,6 @@ const BUTTONS = [
     NgForOf,
     AsyncPipe,
 
-    BsDropdownModule,
     NgIf,
   ],
   standalone: true

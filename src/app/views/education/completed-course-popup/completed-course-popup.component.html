@@ -1,0 +1,29 @@
+
+<div class="my-modal">
+
+  <div class="d-flex flex-row justify-content-between">
+    <h4>
+      Completed Coursework
+    </h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="currentWindow.close()"
+    ></button>
+  </div>
+
+  <br>
+
+  <div *ngFor="let term of COURSES">
+    <h5>{{term.name}}</h5>
+    <ul>
+      <li
+        *ngFor="let course of term.classes"
+      >
+        {{ course.class }} - {{ course.description }}
+      </li>
+    </ul>
+  </div>
+
+</div>
