@@ -7,8 +7,12 @@ export const COMPLETED_COURSES = [
       { class: 'EECS 330', description: 'Datastructures and Algorithms', term: '2023 Fall' },
       { class: 'EECS 348', description: 'Software Engineering I', term: '2023 Fall' },
       { class: 'EECS 388', description: 'Embedded Systems', term: '2023 Spring' },
+      { class: 'EECS 447', description: 'Database Systems', term: '2024 Spring' },
       { class: 'EECS 468', description: 'Programming Paradigms', term: '2023 Fall' },
       { class: 'EECS 510', description: 'Theory of Computing', term: '2023 Spring' },
+      { class: 'EECS 565', description: 'Information and Computer Security', term: '2024 Spring' },
+      { class: 'EECS 678', description: 'Operating Systems', term: '2024 Spring' },
+      { class: 'EECS 690', description: 'Algorithms for High Performance Computing', term: '2024 Spring' },
     ]
   },
   {
