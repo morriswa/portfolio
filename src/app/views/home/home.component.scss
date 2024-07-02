@@ -17,16 +17,15 @@ $sml-caption-threshold: 400px;
     text-align: left;
     color: $pinky-pie;
     text-shadow: 5px 10px $purple-poo;
-    font-size: 8rem;
-    padding: 60px 0 0 20px !important;
-
 
     @media (max-width: $sml-caption-threshold) {
         font-size: 4rem;
+        padding: 10px 0 0 20px !important;
     }
 
-    @media (max-width: 600px) {
-        font-size: 4rem;
+    @media (min-width: $sml-caption-threshold) {
+        font-size: 8rem;
+        padding: 60px 0 0 20px !important;
     }
 }
 
@@ -36,10 +35,14 @@ $sml-caption-threshold: 400px;
     align-items: flex-end;
     color: $light;
     text-shadow: 0 0 5px $purple-poo;
-    padding: 60px 0 0 20px !important;
 
-    font-size: 4rem;
-    @media (max-width: 600px) {
+    @media (max-width: $sml-caption-threshold) {
         font-size: 2rem;
+        padding: 20px 0 0 25px !important;
+    }
+
+    @media (min-width: $sml-caption-threshold) {
+        font-size: 4rem;
+        padding: 60px 0 0 30px !important;
     }
 }
