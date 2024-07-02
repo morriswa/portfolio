@@ -1,6 +1,6 @@
 @use "src/styles/variables" as *;
 
-$sml-caption-threshold: 400px;
+$caption-threshold: 500px;
 
 .fsphoto {
     height: max-content;
@@ -18,12 +18,12 @@ $sml-caption-threshold: 400px;
     color: $pinky-pie;
     text-shadow: 5px 10px $purple-poo;
 
-    @media (max-width: $sml-caption-threshold) {
+    @media (max-width: $caption-threshold) {
         font-size: 4rem;
         padding: 10px 0 0 20px !important;
     }
 
-    @media (min-width: $sml-caption-threshold) {
+    @media (min-width: $caption-threshold) {
         font-size: 8rem;
         padding: 60px 0 0 20px !important;
     }
@@ -36,12 +36,12 @@ $sml-caption-threshold: 400px;
     color: $light;
     text-shadow: 0 0 5px $purple-poo;
 
-    @media (max-width: $sml-caption-threshold) {
+    @media (max-width: $caption-threshold) {
         font-size: 2rem;
         padding: 20px 0 0 25px !important;
     }
 
-    @media (min-width: $sml-caption-threshold) {
+    @media (min-width: $caption-threshold) {
         font-size: 4rem;
         padding: 60px 0 0 30px !important;
     }
