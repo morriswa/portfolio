@@ -1,0 +1,10 @@
+@use "@angular/material" as mat;
+@use "my.theme" as theme;
+
+$pinky-pie: rgba(228,165,209, 1.0);
+$purple-poo: rgb(76,55,141);
+
+$dark: mat.get-theme-color(theme.$my-theme, neutral, 10);
+$light: mat.get-theme-color(theme.$my-theme, neutral, 90);
+
+$warning: #ffd83c;

@@ -1,8 +1,7 @@
-<nav
+<div
   id="app-header"
-  class="navbar navbar-expand-md"
   [ngClass]="{
-    'app-header-wrapper navbar-dark':!isOnMainPage(),
+    'app-header-wrapper':!isOnMainPage(),
     'app-header-wrapper-invisible':isOnMainPage()
   }"
   >
@@ -23,7 +22,6 @@
         <button
           mat-menu-item
           *ngFor="let navButton of navbarButtons"
-          type="button"
           [routerLink]="navButton.path"
         >
           {{ navButton.name }}
@@ -33,19 +31,18 @@
     <div class="app-header-buttons">
       <button
         *ngFor="let navButton of navbarButtons"
-        type="button"
-        class="btn btn-dark"
+        class="btn"
         [routerLink]="navButton.path"
       >
         {{ navButton.name }}
       </button>
     </div>
   }
-</nav>
+</div>
 
 <div
   [ngStyle]="{
-    'margin-top': isOnMainPage()? '0px' : '60px'
+    'margin': isOnMainPage()? '0' : '60px 0 0 0'
   }"
 >
   <router-outlet></router-outlet>

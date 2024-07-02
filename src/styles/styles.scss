@@ -1,0 +1,47 @@
+@use '@angular/material' as mat;
+@use 'my.theme' as theme;
+@use "variables" as *;
+@forward "overrides";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@include mat.core();
+
+html {
+  @include mat.menu-theme(theme.$my-theme);
+  @include mat.typography-hierarchy(theme.$my-theme);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.tab-content {
+    padding: 10px 20px;
+}
+
+.text-with-logo {
+    display: flex;
+    align-items: center;
+
+    > img {
+        max-height: 25px;
+        display: inline;
+        // float: left;
+        margin-right: 5px;
+    }
+}
+
+.my-modal {
+    padding: 30px;
+    overflow-y: scroll;
+    max-height: 80vh;
+
+    .material-symbols-outlined {
+      font-size: 40px;
+    }
+}

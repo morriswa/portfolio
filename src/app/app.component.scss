@@ -1,6 +1,45 @@
+@use "src/styles/variables" as *;
+
+#app-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  .btn {
+    margin: 0 5px 0 0;
+    transition: background-color 1s;
+
+    color: white;
+    background-color: $dark;
+
+    &:hover {
+      background-color: $warning;
+      color: $dark;
+    }
+  }
+}
 
 .app-header-wrapper {
-    background-color: var(--bs-dark);
+  background-color: $dark;
+}
+
+.app-header-wrapper-invisible {
+
+  background-color: rgba(0, 0, 0, 0);
+
+  .dropdown-toggle {
+    background-color: $purple-poo;
+  }
+}
+
+.app-header-buttons {
+  padding: 0;
 }
 
 .dropdown-toggle {
@@ -10,21 +49,17 @@
   border-radius: 5px;
 }
 
+.dropdown-toggle:after {
+  display: none;
+}
+
 .dropdown-toggle-icon {
   height: 32px;
   width: 32px;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(228,165,209, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.dropdown-toggle:after {
-  display: none;
-}
 
-.app-header-wrapper-invisible {
-    .dropdown-toggle {
-        background-color: var(--purple-poo);
-    }
-}
 
 .link-styles {
     margin-top: auto;
@@ -32,56 +67,25 @@
     text-decoration: none;
 
     &-white,:focus,:active {
-        color: var(--bs-white);
+        color: white;
 
         &:hover {
-            color: var(--bs-warning);
+            color: $warning;
         }
     }
 
     &-dark,:focus,:active {
-        color: var(--bs-warning);
+        color: $warning;
         text-decoration: none;
 
         &:hover {
-            color: var(--bs-white);
+            color: white;
         }
     }
 
     &-invisible {
         opacity: 0;
     }
-}
-
-
-#app-header {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    width: 100vw;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-
-    &-buttons {
-        float: right;
-        text-align: right;
-    }
-
-    .btn {
-        margin: 0 5px 0 0 ;
-        padding: 5px 10px;
-        transition: background-color 1s;
-
-        &:hover {
-            background-color: var(--bs-warning);
-            color: var(--bs-dark);
-        }
-    }
-}
-
-.app-header-buttons {
-  padding: 0;
 }
 
 .dropdown-menu {

@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+
+$my-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$violet-palette,
+  ),
+  typography: (
+    brand-family: 'Ubuntu',
+    plain-family: 'Ubuntu',
+    bold-weight: 700
+  ),
+  density: (
+    scale: -1
+  )
+));

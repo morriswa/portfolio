@@ -1,3 +1,4 @@
+@use "src/styles/variables" as *;
 
 $sml-caption-threshold: 400px;
 
@@ -14,10 +15,10 @@ $sml-caption-threshold: 400px;
 
 #caption {
     text-align: left;
-    color: var(--pinky-pie);
-    text-shadow: 5px 10px var(--purple-poo);
+    color: $pinky-pie;
+    text-shadow: 5px 10px $purple-poo;
     font-size: 8rem;
-    padding-left: 20px;
+    padding: 60px 0 0 20px !important;
 
 
     @media (max-width: $sml-caption-threshold) {
@@ -33,9 +34,9 @@ $sml-caption-threshold: 400px;
     display: flex;
     text-align: left;
     align-items: flex-end;
-    color: var(--bs-gray-200);
-    text-shadow: 0 0 5px var(--purple-poo);
-    padding-left: 20px;
+    color: $light;
+    text-shadow: 0 0 5px $purple-poo;
+    padding: 60px 0 0 20px !important;
 
     font-size: 4rem;
     @media (max-width: 600px) {

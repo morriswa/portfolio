@@ -1,16 +1,9 @@
 
 <div class="my-modal">
 
-  <div class="d-flex flex-row justify-content-between">
-    <h4>
-      Completed Coursework
-    </h4>
-    <button
-      type="button"
-      class="btn-close"
-      aria-label="Close"
-      (click)="currentWindow.close()"
-    ></button>
+  <div style="display: flex; flex-direction: row; justify-content: space-between">
+    <h4>Completed Coursework</h4>
+    <span class="material-symbols-outlined" (click)="currentWindow.close()">close</span>
   </div>
 
   <br>
