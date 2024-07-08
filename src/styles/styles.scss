@@ -9,6 +9,7 @@
 
 html {
   @include mat.menu-theme(theme.$my-theme);
+  @include mat.table-typography(theme.$my-theme);
   @include mat.typography-hierarchy(theme.$my-theme);
 }
 

@@ -5,6 +5,7 @@ import {CommonPageHeaderComponent} from "../../components/common-page-header/com
 import {NgFor} from "@angular/common";
 import {MatDialog} from "@angular/material/dialog";
 import {CompletedCoursePopupComponent} from "./completed-course-popup/completed-course-popup.component";
+import {CompletedCourseTableComponent} from "./completed-course-table/completed-course-table.component";
 
 
 @Component({
@@ -16,6 +17,7 @@ import {CompletedCoursePopupComponent} from "./completed-course-popup/completed-
     CommonPageHeaderComponent,
 
     NgFor,
+    CompletedCourseTableComponent,
 
   ],
   providers: [],

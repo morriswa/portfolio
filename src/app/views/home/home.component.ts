@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IMAGE_LIBRARY } from 'src/app/images';
 import {TypeDeleteEffectComponent} from "../../components/type-delete-effect/type-delete-effect.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -13,4 +14,8 @@ import {TypeDeleteEffectComponent} from "../../components/type-delete-effect/typ
 })
 export class HomeComponent {
   IMAGE_LIBRARY=IMAGE_LIBRARY
+
+  constructor(router: Router) {
+    router.navigate(['/'])
+  }
 }
