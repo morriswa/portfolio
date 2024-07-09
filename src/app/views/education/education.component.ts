@@ -3,8 +3,6 @@ import { IMAGE_LIBRARY } from 'src/app/images';
 import {DualContentHeaderComponent} from "../../components/dual-content-header/dual-content-header.component";
 import {CommonPageHeaderComponent} from "../../components/common-page-header/common-page-header.component";
 import {NgFor} from "@angular/common";
-import {MatDialog} from "@angular/material/dialog";
-import {CompletedCoursePopupComponent} from "./completed-course-popup/completed-course-popup.component";
 import {CompletedCourseTableComponent} from "./completed-course-table/completed-course-table.component";
 
 
@@ -27,9 +25,6 @@ export class EducationComponent {
 
   IMAGE_LIBRARY = IMAGE_LIBRARY;
 
-  constructor(private modalService: MatDialog) {}
+  constructor() {}
 
-  openCompletedCoursePopup() {
-    this.modalService.open(CompletedCoursePopupComponent)
-  }
 }

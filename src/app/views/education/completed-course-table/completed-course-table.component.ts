@@ -2,7 +2,7 @@ import {AfterViewChecked, Component, ViewChild} from '@angular/core';
 import {
   MatTableDataSource, MatTableModule
 } from "@angular/material/table";
-import {COMPLETED_COURSES} from "../../../completed-courses-2";
+import {COMPLETED_COURSES} from "../../../completed-courses";
 import {MatSort, MatSortModule} from "@angular/material/sort";
 
 @Component({
