@@ -16,22 +16,25 @@ jobs:
       with:
         node-version: 20
 
+    - uses: aws-actions/configure-aws-credentials@v4.0.2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-2
+
     - name: Get Package Version
       id: package-version
       uses: martinbeentjes/npm-get-version-action@main
 
-    - name: Build and Test Angular App
+    - name: Build and Test
       run: |
         npm ci
         npm run test
-        npm run build --prod
-    - name: Login to Docker
-      uses: docker/login-action@v3
-      with:
-        username: morriswa
-        password: ${{ secrets.DOCKER_KEY }}
+        npm run build:www
 
-    - name: Build and Publish Container
+    - name: Publish
       run: |
-        docker build . -t morriswa/portfolio:${{ steps.package-version.outputs.current-version}}
-        docker push morriswa/portfolio:${{ steps.package-version.outputs.current-version}}
+        cd ./dist
+        tar -czvf portfolio-dist.tar.gz ./portfolio
+        export ASSET_SHA256=$(sha256sum portfolio-dist.tar.gz | awk '{print $1;}')
+        aws codeartifact publish-package-version --domain morriswa-org --repository morriswa-central --format generic --namespace org.morriswa --package portfolio-dist --package-version ${{ steps.package-version.outputs.current-version}} --asset-content portfolio-dist.tar.gz --asset-name portfolio-dist.tar.gz --asset-sha256 "$ASSET_SHA256" --unfinished
