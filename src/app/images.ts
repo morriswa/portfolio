@@ -12,7 +12,7 @@ export const IMAGE_LIBRARY = {
         url: 'https://hackku.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4a3fd4d7-67fc-492d-9291-f489e6db69c4%2Fnotion_banner_(1).png?table=block&id=d870cdb8-e84b-425a-b67a-2eedcb41344c&spaceId=3bfce2a8-bbfa-426e-9a40-4136f0a23d79&width=2000&userId=&cache=v2'
     },
     seniorPhoto: {
-        url: 'assets/_CEP6700.jpg'
+        url: 'assets/fullscreen_image.jpg'
     },
     springLogo: {
         url: 'https://www.svgrepo.com/show/354380/spring-icon.svg'
